@@ -1,26 +1,15 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tokens del tema (reemplaza por los tuyos) */
+@theme {
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --spacing: 0.25rem;           /* base de spacing dinámica */
+  --color-brand-500: oklch(0.65 0.12 250);
+  --radius-xl: 1rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Si usas un UI lib externo en node_modules, regístralo como fuente: */
+@source "../node_modules/@mi-org/ui";
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* (Opcional) Modo oscuro por clase: define la variante una vez y usa `dark:` en HTML */
+@custom-variant dark (&:where(.dark, .dark *));
