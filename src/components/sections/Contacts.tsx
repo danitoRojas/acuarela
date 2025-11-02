@@ -1,10 +1,17 @@
+'use client'
 import { ArrowRight } from "lucide-react";
+import CustomModal from "../utils/CustomModal";
+import { useState } from "react";
+import FormContact from "../layout/FormContact";
+import Location from "../layout/Location";
 
 export default function Contacts() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
   return(
-    <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-6 m-auto">
+    <div className="max-w-7xl w-[95%] grid grid-cols-1 lg:grid-cols-2 gap-6 m-auto">
       <div className="bg-[#c8d4e1] rounded-3xl p-8 relative overflow-hidden">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-8" onClick={() => setOpenModal(true)}>
           <span className="text-sm text-gray-700">Conócenos</span>
           <ArrowRight className="w-5 h-5 text-gray-700" />
         </div>
@@ -40,7 +47,7 @@ export default function Contacts() {
         <div className="absolute bottom-0 right-0 w-32 h-32 bg-[#2d7a5f] rounded-tl-full" />
 
         <div className="relative z-10">
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center justify-between mb-8" onClick={() => setIsModalOpen(true)}>
             <span className="text-sm text-white/90">Sé parte de la Red</span>
             <ArrowRight className="w-5 h-5 text-white/90" />
           </div>
@@ -55,6 +62,22 @@ export default function Contacts() {
           </h2>
         </div>
       </div>
+
+      <CustomModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Formulario de Contacto"
+        size="md"
+      >
+        <FormContact />
+      </CustomModal>
+      <CustomModal
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+        size="xl"
+      >
+        <Location />
+      </CustomModal>
     </div>
   )
 }
