@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import FooterPage from "@/components/sections/footer";
 
 export const metadata: Metadata = {
   title: "Mi Sitio",
@@ -18,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="w-full h-full flex items-center justify-center p-0 m-0">
           {children}
         </main>
-        <Footer />
+        <FooterPage />
       </body>
     </html>
   );
