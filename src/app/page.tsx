@@ -2,6 +2,8 @@ import HomeHero from "@/components/sections/HomeHero";
 import Contacts from "@/components/sections/Contacts";
 import BlogSection from "@/components/sections/Blog";
 import NetworkStats from "@/components/sections/NetworkStats";
+import News from "@/components/sections/News";
+import ResourcesSlider from "@/components/sections/ResouserSlider";
 
 export default function Page() {
   return (
@@ -10,6 +12,8 @@ export default function Page() {
         <HomeHero />
         <NetworkStats />
         <BlogSection/>
+        <News />
+        <ResourcesSlider />
         <Contacts />
       </div>
 
