@@ -1,12 +1,15 @@
 [build]
-command = "npm run build"
+# Usa el gestor que estés usando. Si usas pnpm:
+command = "pnpm build"
+# Si usas npm: command = "npm run build"
 publish = ".next"
 
-[plugins]
-  package = "@netlify/plugin-nextjs"
+# Cada plugin va en su propio bloque [[plugins]]
+[[plugins]]
+package = "@netlify/plugin-nextjs"
 
 [build.environment]
-# Fuerza versión de Node en el build
 NODE_VERSION = "22"
-# Opcional para silenciar telemetría
 NEXT_TELEMETRY_DISABLED = "1"
+# Si usas pnpm, opcional para evitar el lock congelado (parche):
+# PNPM_FLAGS = "--no-frozen-lockfile"
