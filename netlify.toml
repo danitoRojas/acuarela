@@ -1,0 +1,12 @@
+[build]
+command = "npm run build"
+publish = ".next"
+
+[plugins]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+# Fuerza versión de Node en el build
+NODE_VERSION = "22"
+# Opcional para silenciar telemetría
+NEXT_TELEMETRY_DISABLED = "1"
