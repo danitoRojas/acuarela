@@ -1,7 +1,7 @@
 const SliderIcon6 = () => (
   <svg
-     width="443"
-    height="443"
+     width="363"
+    height="363"
     viewBox="0 0 104 104"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

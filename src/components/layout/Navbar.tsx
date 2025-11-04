@@ -40,9 +40,9 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link href="/" className="group inline-flex items-center gap-2">
             <span className="size-8 rounded-lg bg-blue-600 text-white grid place-items-center font-bold group-hover:opacity-90 transition-opacity">
-              M
+              A
             </span>
-            <span className="font-semibold tracking-tight dark:text-white">Mi Sitio</span>
+            <span className="font-semibold tracking-tight dark:text-white">Acuarela</span>
           </Link>
         </div>
 

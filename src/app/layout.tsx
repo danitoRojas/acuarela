@@ -11,15 +11,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
-      {/* layout grid: header | main | footer */}
-      <body className="min-h-screen min-w-full grid grid-rows-[auto_1fr_auto] bg-white text-slate-900 antialiased dark:bg-slate-950">
+    <html lang="es" className="h-full">
+      {/* Usa dvh para móviles, flex para empujar el footer abajo */}
+      <body className="min-h-[100dvh] flex flex-col bg-white text-slate-900 antialiased dark:bg-slate-950 overflow-x-hidden">
         <Navbar />
-        {/* main ocupa todo el espacio visible */}
-        <main className="w-full h-full flex items-center justify-center p-0 m-0">
+
+        {/* No centres todo: deja que cada sección (p.ej. HomeHero) se encargue */}
+        <main className="flex-1 w-full">
           {children}
         </main>
         <FooterPage />
+
+        <Footer />
       </body>
     </html>
   );
