@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function SeccionInstitucional() {
   const logos = [
-    "/img/acurela/4.jpg",
+     "/logos/alpes.svg",
     "/logos/alpes.svg",
     "/logos/kilimanjaro.svg",
     "/logos/oxford.svg",
@@ -12,22 +12,27 @@ export default function SeccionInstitucional() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 lg:py-0 bg-slate-50">
-      {/* Fondos decorativos con imágenes */}
-      <div
-        className="absolute top-8 right-24 w-56 h-56 rounded-3xl z-0 hidden lg:block bg-cover bg-center shadow-lg opacity-90"
-        style={{
-          backgroundImage: "url('/fondos/cuadro-azul.jpg')", // 🔹 Cambia esta ruta por tu imagen
-        }}
-      ></div>
+      {/* Imagen decorativa superior derecha */}
+      <div className="absolute top-8 right-24 w-56 h-56 rounded-3xl z-0 hidden lg:block overflow-hidden shadow-lg opacity-90">
+        <Image
+          src="/img/acurela/4.jpg"
+          alt="Decoración acuarela"
+          fill
+          className="object-cover"
+        />
+      </div>
 
-      <div
-        className="absolute bottom-8 left-24 w-56 h-56 rounded-3xl z-0 hidden lg:block bg-cover bg-center shadow-lg opacity-90"
-        style={{
-          backgroundImage: "url('/fondos/cuadro-morado.jpg')", // 🔹 Cambia esta ruta por tu imagen
-        }}
-      ></div>
+      {/* Imagen decorativa inferior izquierda */}
+      <div className="absolute bottom-8 left-24 w-56 h-56 rounded-3xl z-0 hidden lg:block overflow-hidden shadow-lg opacity-90">
+        <Image
+        src="/img/acurela/5.jpg"
+          alt="Decoración morada"
+          fill
+          className="object-cover"
+        />
+      </div>
 
-      {/* Contenedor centrado */}
+      {/* Contenido centrado */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-4xl px-6">
         <div className="bg-white rounded-3xl shadow-xl p-10 lg:p-14 flex flex-col justify-center items-center w-full backdrop-blur-sm/10">
           <p className="text-slate-900 text-2xl lg:text-3xl font-semibold mb-6 leading-snug">
