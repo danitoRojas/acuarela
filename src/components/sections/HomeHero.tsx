@@ -34,7 +34,7 @@ type Slide = {
 /* ---------------------- data demo ---------------------- */
 const SLIDES: Slide[] = [
   {
-    src: "/img/acurela/1.jpg",
+    src: "/img/acuarela/1.jpg",
     alt: "Niño jugando en aula",
     title: "Grow thinking",
     subtitle: "that everything is possible.",
@@ -48,7 +48,7 @@ const SLIDES: Slide[] = [
     },
   },
   {
-    src: "/img/acurela/2.jpg",
+    src: "/img/acuarela/2.jpg",
     alt: "Aula creativa",
     title: "Create curiosity",
     subtitle: "through play and discovery.",
@@ -62,9 +62,9 @@ const SLIDES: Slide[] = [
     },
   },
   {
-    src: "/img/acurela/3.jpg",
+    src: "/img/acuarela/3.jpg",
     alt: "Aprendizaje en equipo",
-    title: "Learn together",
+    title: "Learn ",
     subtitle: "with empathy and collaboration.",
     Icon: SliderIcon6,
     theme: {

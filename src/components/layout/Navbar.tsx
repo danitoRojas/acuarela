@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -39,10 +40,12 @@ export default function Navbar() {
         {/* Brand */}
         <div className="flex items-center gap-3">
           <Link href="/" className="group inline-flex items-center gap-2">
-            <span className="size-8 rounded-lg bg-blue-600 text-white grid place-items-center font-bold group-hover:opacity-90 transition-opacity">
-              A
-            </span>
-            <span className="font-semibold tracking-tight dark:text-white">Acuarela</span>
+            <Image
+              src="/img/acuarela/logo.png"
+              alt="Logo"
+              width={160}
+              height={160}
+            />
           </Link>
         </div>
 
@@ -60,7 +63,9 @@ export default function Navbar() {
                 className={[
                   "px-1.5 py-1 rounded-md outline-none transition-colors",
                   "hover:text-blue-600 focus-visible:ring-2 focus-visible:ring-blue-500/60",
-                  active ? "text-blue-600" : "text-slate-700 dark:text-slate-200",
+                  active
+                    ? "text-blue-600"
+                    : "text-slate-700 dark:text-slate-200",
                 ].join(" ")}
               >
                 {l.label}
@@ -71,7 +76,7 @@ export default function Navbar() {
             href="/#cta"
             className="rounded-lg bg-blue-600 px-3 py-2 text-white hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/70"
           >
-            Empezar
+            Contacto
           </Link>
         </nav>
 
@@ -88,20 +93,34 @@ export default function Navbar() {
           <span className="sr-only">Abrir menú</span>
           {/* Icono hamburguesa / close */}
           <svg
-            className={`size-6 transition-[transform,opacity] ${open ? "opacity-0 -rotate-90" : "opacity-100 rotate-0"}`}
+            className={`size-6 transition-[transform,opacity] ${
+              open ? "opacity-0 -rotate-90" : "opacity-100 rotate-0"
+            }`}
             viewBox="0 0 24 24"
             fill="none"
             aria-hidden="true"
           >
-            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path
+              d="M4 7h16M4 12h16M4 17h16"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           </svg>
           <svg
-            className={`-ml-6 size-6 transition-[transform,opacity] ${open ? "opacity-100 rotate-0" : "opacity-0 rotate-90"}`}
+            className={`-ml-6 size-6 transition-[transform,opacity] ${
+              open ? "opacity-100 rotate-0" : "opacity-0 rotate-90"
+            }`}
             viewBox="0 0 24 24"
             fill="none"
             aria-hidden="true"
           >
-            <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path
+              d="M6 6l12 12M18 6L6 18"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
           </svg>
         </button>
       </div>
@@ -133,7 +152,9 @@ export default function Navbar() {
                       "block w-full rounded-md px-3 py-2 text-base outline-none",
                       "hover:bg-slate-100 dark:hover:bg-slate-800",
                       "focus-visible:ring-2 focus-visible:ring-blue-500/70",
-                      active ? "text-blue-600" : "text-slate-700 dark:text-slate-200",
+                      active
+                        ? "text-blue-600"
+                        : "text-slate-700 dark:text-slate-200",
                     ].join(" ")}
                   >
                     {l.label}
